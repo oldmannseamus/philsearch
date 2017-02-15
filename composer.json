@@ -13,7 +13,8 @@
         "drupal/field_group": "^1.0@RC",
         "drupal/geofield": "^1.0@alpha",
         "drupal/devel": "^1.0@RC",
-        "drupal/module_filter": "^3.0"
+        "drupal/module_filter": "^3.0",
+        "drupal/basic": "^1.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
