@@ -1,0 +1,17 @@
+name: 'Trek Content Type'
+description: 'Stores configuration for the Trek content type.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - inline_entity_form
+  - menu_ui
+  - node
+  - options
+  - path
+  - philsearch_camp
+  - text
+  - user
+  - views
+version: 8.x-1.0
+package: Philsearch

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trek_year
+    - node.type.trek
+id: node.trek.field_trek_year
+field_name: field_trek_year
+entity_type: node
+bundle: trek
+label: Year
+description: 'The year for which this itinerary is available.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1938
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

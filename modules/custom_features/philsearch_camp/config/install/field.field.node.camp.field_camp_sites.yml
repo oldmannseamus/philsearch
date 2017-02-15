@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_sites
+    - node.type.camp
+id: node.camp.field_camp_sites
+field_name: field_camp_sites
+entity_type: node
+bundle: camp
+label: 'Number of Campsites'
+description: 'Enter the number of provided campsites containing a complete BEARmuda triangle. Do not account for primitive or brush campsites.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

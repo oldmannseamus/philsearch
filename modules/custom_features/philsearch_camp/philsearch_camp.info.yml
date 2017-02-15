@@ -1,0 +1,16 @@
+name: 'Camp Content Type'
+description: 'Stores configuration for the Camp content type.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - geofield
+  - menu_ui
+  - node
+  - options
+  - path
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.0
+package: Philsearch

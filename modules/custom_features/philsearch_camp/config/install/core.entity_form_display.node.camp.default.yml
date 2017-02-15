@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.camp.body
+    - field.field.node.camp.field_camp_altitude
+    - field.field.node.camp.field_camp_coordinates
+    - field.field.node.camp.field_camp_sites
+    - field.field.node.camp.field_camp_type
+    - field.field.node.camp.field_camp_water
+    - field.field.node.camp.field_region
+    - node.type.camp
+  module:
+    - geofield
+    - path
+    - text
+id: node.camp.default
+targetEntityType: node
+bundle: camp
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_camp_altitude:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_camp_coordinates:
+    weight: 2
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+  field_camp_sites:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_camp_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_camp_water:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_region:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  path:
+    type: path
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

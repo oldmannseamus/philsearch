@@ -1,0 +1,33 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trek.body
+    - field.field.node.trek.field_itinerary
+    - field.field.node.trek.field_region
+    - field.field.node.trek.field_trek_difficulty
+    - field.field.node.trek.field_trek_length
+    - node.type.trek
+  module:
+    - text
+    - user
+id: node.trek.teaser
+targetEntityType: node
+bundle: trek
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_itinerary: true
+  field_region: true
+  field_trek_difficulty: true
+  field_trek_length: true

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.body
+    - field.field.node.program.field_program_location
+    - field.field.node.program.field_program_tags
+    - node.type.program
+  module:
+    - text
+    - user
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_program_location: true
+  field_program_tags: true

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_water
+    - node.type.camp
+  module:
+    - options
+id: node.camp.field_camp_water
+field_name: field_camp_water
+entity_type: node
+bundle: camp
+label: Water
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

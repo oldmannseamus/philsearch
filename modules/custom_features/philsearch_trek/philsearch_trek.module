@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Stores configuration for the Trek content type.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implement hook_entity_presave().
+ */
+function philsearch_trek_node_presave(EntityInterface $node) {
+  $node_type = $node->getType();
+
+  // Automatically format Trek titles for ease of identification.
+  if ($node_type == 'trek') {
+    $trek_number = $node->field_trek_number->value;
+    $trek_year = $node->field_trek_year->value;
+
+    $trek_title = $trek_year . " - Trek # " . $trek_number;
+    $node->title->value = $trek_title;
+  }
+}

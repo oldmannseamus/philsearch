@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Stores configuration for the Trek content type.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implement hook_form_alter().
+ */
+function philsearch_camp_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_camp_form') {
+    // Apply Chosen to certain select fields.
+    $chosen_fields = array(
+      'field_region',
+      'field_camp_type',
+    );
+    foreach ($chosen_fields as $field) {
+      $form[$field]['widget']['#attributes']['class'][] = 'chosen-select';
+    }
+  }
+}

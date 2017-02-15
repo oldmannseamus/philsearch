@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_altitude
+    - node.type.camp
+id: node.camp.field_camp_altitude
+field_name: field_camp_altitude
+entity_type: node
+bundle: camp
+label: Altitude
+description: 'In feet. Units will be appended.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 15000
+  prefix: ''
+  suffix: ' ft.'
+field_type: integer

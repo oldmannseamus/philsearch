@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.trek.body
+    - field.field.node.trek.field_itinerary
+    - field.field.node.trek.field_region
+    - field.field.node.trek.field_trek_difficulty
+    - field.field.node.trek.field_trek_length
+    - field.field.node.trek.field_trek_number
+    - field.field.node.trek.field_trek_year
+    - node.type.trek
+  module:
+    - options
+    - text
+    - user
+id: node.trek.default
+targetEntityType: node
+bundle: trek
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_itinerary:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_region:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_trek_difficulty:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_trek_length:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+hidden:
+  field_trek_number: true
+  field_trek_year: true
+  links: true

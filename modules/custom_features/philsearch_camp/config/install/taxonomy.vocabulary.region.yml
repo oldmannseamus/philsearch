@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Region
+vid: region
+description: 'Used to classify Treks and Campsites by region.'
+hierarchy: 0
+weight: 0

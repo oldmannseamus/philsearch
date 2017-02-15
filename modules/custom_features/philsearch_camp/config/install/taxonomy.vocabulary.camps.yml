@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Camps
+vid: camps
+description: 'Used to classify Camps by available amenities.'
+hierarchy: 1
+weight: 0

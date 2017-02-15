@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.camp.body
+    - field.field.node.camp.field_camp_altitude
+    - field.field.node.camp.field_camp_coordinates
+    - field.field.node.camp.field_camp_sites
+    - field.field.node.camp.field_camp_type
+    - field.field.node.camp.field_camp_water
+    - field.field.node.camp.field_region
+    - node.type.camp
+  module:
+    - geofield
+    - options
+    - text
+    - user
+id: node.camp.default
+targetEntityType: node
+bundle: camp
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_camp_altitude:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_camp_coordinates:
+    weight: 1
+    label: above
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
+  field_camp_sites:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_camp_type:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_camp_water:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_region:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  links: true

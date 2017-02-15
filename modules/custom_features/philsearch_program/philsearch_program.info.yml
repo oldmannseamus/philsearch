@@ -1,0 +1,15 @@
+name: 'Program Content Type'
+description: 'Stores configuration for the Program content type.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - philsearch_camp
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.0
+package: Philsearch

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trek_length
+    - node.type.trek
+id: node.trek.field_trek_length
+field_name: field_trek_length
+entity_type: node
+bundle: trek
+label: 'Approximate Length'
+description: '(In miles)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: 'Approximately '
+  suffix: ' Miles'
+field_type: integer

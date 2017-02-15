@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_camp_type
+    - node.type.camp
+    - taxonomy.vocabulary.camps
+id: node.camp.field_camp_type
+field_name: field_camp_type
+entity_type: node
+bundle: camp
+label: 'Camp Amenities'
+description: 'Tag all that apply.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      camps: camps
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
